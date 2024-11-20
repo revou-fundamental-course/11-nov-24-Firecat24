@@ -117,10 +117,39 @@ footer {
 }
 
 .gambar {
-    height: 60vh;
+    width: 100%;
+    height: 100%;
     background-color: grey;
     border-radius: 20px;
 }
+
+.gambar.autoslide {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.gambar .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.gambar .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.gambar .slide.active {
+    opacity: 1;
+}
+
 
 .formulir {
     text-align: start;
